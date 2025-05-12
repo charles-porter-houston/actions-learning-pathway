@@ -7,3 +7,11 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: echo "hi Charles on Monday"
+
+      - name: Create text file with secret
+        run: echo "${{ secrets.MY_CP1 }}" > secret.txt
+
+      - name: Display test in file content
+        run: cat secret.txt 
+
+        
